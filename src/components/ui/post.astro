@@ -2,10 +2,10 @@
 import { Picture } from 'astro:assets';
 import { getFormattedDate } from '@utils/all.js';
 
-const { post, slug } = Astro.props;
+const { post, id } = Astro.props;
 ---
 
-<a href={`/blog/${slug}`}>
+<a href={`/blog/${id}`}>
   <article class='grid md:grid-cols-2 gap-5 md:gap-10 items-center'>
     <Picture
       src={post.image.src}

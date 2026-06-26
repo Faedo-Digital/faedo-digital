@@ -26,7 +26,7 @@ entries = entries.slice(0, 3);
   </p>
 
   <ul class='grid gap-16 max-w-4xl mx-auto mt-8'>
-    {entries.map((p) => <Post post={p.data} slug={p.slug} />)}
+    {entries.map((p) => <Post post={p.data} id={p.id} />)}
   </ul>
 
   <p class='mt-12 text-center'>

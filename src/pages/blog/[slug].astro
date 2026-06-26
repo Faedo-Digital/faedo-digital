@@ -1,5 +1,5 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 import Layout from '@layouts/Layout.astro';
 import Container from '@components/container.astro';
 import { getFormattedDate } from '@utils/all.js';
@@ -8,14 +8,14 @@ import { getFormattedDate } from '@utils/all.js';
 export async function getStaticPaths() {
   const blogEntries = await getCollection('blog');
   return blogEntries.map((entry) => ({
-    params: { slug: entry.slug },
+    params: { slug: entry.id },
     props: { entry },
   }));
 }
 
 const { entry } = Astro.props;
 
-const { Content } = await entry.render();
+const { Content } = await render(entry);
 
 export const prerender = true;
 ---

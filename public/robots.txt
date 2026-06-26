@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: http://faedodigital.com/sitemap-index.xml
+Sitemap: https://faedodigital.com/sitemap-index.xml
