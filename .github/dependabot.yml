@@ -10,3 +10,6 @@ updates:
       all-dependencies:
         patterns:
           - "*"
+        update-types:
+          - "minor"
+          - "patch"
